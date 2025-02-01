@@ -296,6 +296,7 @@ class mit_krb5 (
   Optional[Array[String]] $module               = undef,
   Optional[String] $db_module_dir               = undef,
   String $krb5_conf_path                        = '/etc/krb5.conf',
+  String $krb5_conf_d_path                      = '/etc/krb5.conf.d',
   String $krb5_conf_owner                       = 'root',
   String $krb5_conf_group                       = 'root',
   String $krb5_conf_mode                        = '0444',
@@ -306,6 +307,7 @@ class mit_krb5 (
   Hash $appdefaults                             = {},
   Hash $realms                                  = {},
   Hash $dbmodules                               = {},
+  Boolean $krb5_conf_d_purge                    = false,
 ) {
   # SECTION: Parameter validation {
   # Boolean-type parameters are not type-validated at this time.
